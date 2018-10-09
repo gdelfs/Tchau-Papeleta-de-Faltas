@@ -1,0 +1,85 @@
+%%
+%
+% ARQUIVO: dados-pfc.tex
+%
+% VERSÃO: 1.0
+% DATA: Maio de 2016
+% AUTOR: Coordenação de Trabalhos Especiais SE/8
+% 
+%  Arquivo tex com os dados acerca do documento de PFC e da apresentação.
+%
+%   nos campos que definem nomes (autor; orientador; co-orientador; membros da banca)
+%   É PRECISO usar os COMANDOS LaTeX para acentuação, conforme abaixo:
+%
+%         \'a - á || \`a - à || \~a - ã || \^a - â 
+%         \'e - é || \^e - ê || \'i - í 
+%         \'o - ó || \~o - õ || \^o - ô 
+%         \'u - ú || \"u - ü
+%
+%%
+
+%%% AUTORES DO PFC (Nome completo)
+% ---
+%  aceita até 03 autores (de autorI até autorIII)
+%    a. preencher sucessivamente a partir de autorI
+%    b. REMOVER as definições não necessárias
+% ---
+\autorI{Daniel dos Reis Abreu}
+\autorII{Gabriel Moysés Delfino}
+\autorIII{José Luiz Neves Voltan}
+
+%%% POSTOS DOS AUTORES DO PFC
+% ---
+%  aceita os postos de até 03 autores (de postoautorI até postoautorIII)
+%    a. preencher sucessivamente a partir de postoautorI (que deve ser o posto de autorI)
+%    b. se o autorX É CIVIL, NÃO DEFINIR postoautorX (remover a linha de definição)
+%    c. se o autorX É MILITAR, DEFINIR postoautorX com UMA das seguintes ALTERNATIVAS: Alu / 1 Ten / Cap
+% ---
+\postoautorI{Cap}
+\postoautorII{1º Ten}
+\postoautorIII{1º Ten}
+
+%%% TITULO DO PFC
+\titulo{Tchau Papeleta de Faltas!}
+
+%%% DATA DA APRESENTAÇÃO (formato {dd}{Mmmmm}{aaaa})
+\datadefesa{1}{outubro}{2018}
+
+%%% ORIENTADOR DO PFC
+% ---
+%  CAMPO 1: P (para Prof.); PA (para Profa.); ou qualquer coisa (inclusive VAZIO) - o que for escrito aparecerá no documento
+%  CAMPO 2: Nome completo
+%  CAMPO 3: D (para D.Sc.); P (para Ph.D.); M (para M.Sc.) ou qualquer coisa (inclusive VAZIO) - o que for escrito aparecerá no documento
+%  CAMPO 4: Instituição (com "do / da")
+% ---
+\orientador{Ten Cel}{Anderson Fernandes Pereira dos Santos}{D}{do IME}
+
+%%% CO-ORIENTADOR DO PFC
+% ---
+%  se não houver co-orientador, REMOVA ESTA LINHA
+%  preenchimento idêntico a \orientador{}{}{}{}
+% ---
+% \coorientador{PA}{Raquel Coelho Gomes Pinto}{P}{do IME}
+% ---
+%%% NÚMERO DA ENTRADA DA BIBLIOTECA (pegar na Biblioteca do IME)
+\biblioref{005}{A162t}
+
+%%% PALAVRAS-CHAVES DO PFC
+% ---
+%  devem ser separadas por vírgula e É OBRIGATÓRIO ter pelo menos uma
+% ---
+\palavraschaves{Reconhecimento facial}
+
+%%% OUTROS MEMBROS DA BANCA DO PFC
+% ---
+%  aceita até mais 05 membros (de membrobancaI até membrobancaV)
+%    a. preencher sucessivamente a partir de membrobancaI
+%    b. REMOVER as definições não necessárias
+%
+%  cada membro tem preenchimento idêntico a \orientador{}{}{}{}
+% ---
+\membrobancaI{Ten Cel}{Sérgio dos Santos Cardoso Silva}{M}{do IME}
+\membrobancaII{P}{Ronaldo Ribeiro Goldschimdt}{D}{do IME}
+%\membrobancaIII{}{Nome do Membro da Banca 3}{}{da COPPE/UFRJ}
+%\membrobancaIV{}{Nome do Membro da Banca 4}{}{da UNIRIO}
+%\membrobancaV{}{Nome do Membro da Banca 5}{}{da UERJ}

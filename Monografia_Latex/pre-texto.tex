@@ -1,0 +1,154 @@
+%%
+%
+% ARQUIVO: pre-texto.tex
+%
+% VERSÃO: 1.0
+% DATA: Maio de 2016
+% AUTOR: Coordenação de Trabalhos Especiais SE/8
+% 
+%  Arquivo tex para a criação da parte pré-textual do documento de Projeto de Fim de Curso.
+%
+%%
+
+
+% -----
+% PÁGINA DE CAPA DO DOCUMENTO DE PFC
+% -----
+\makecapa
+
+% -----
+% PÁGINA DE TÍTULO DO PFC
+% -----
+\prepareadvisors
+\maketitle
+
+% -----
+% PÁGINA DE CRÉDITOS DO DOCUMENTO DE PFC
+% -----
+\makecredits
+
+% -----
+% PÁGINA DE FOLHA DE ASSINATURAS
+% -----
+\preparemembers
+\approvalpage
+
+% -----
+% PÁGINA DE DEDICATÓRIA (OPCIONAL, ie. pode remover toda a página)
+% -----
+%%% DEDICATÓRIA - PREENCHER...
+\dedicatoria{%
+Ao Instituto Militar de Engenharia, alicerce de nossa formação e aperfeiçoamento.
+}%
+\makededication
+
+% -----
+% PÁGINA DE AGRADECIMENTOS (OPCIONAL, ie. pode remover toda a página)
+% -----
+%%% AGRADECIMENTOS - PREENCHER...
+\agradecimentos{%
+Agradecemos a todas as pessoas que nos incentivaram, apoiaram e possibilitaram esta oportunidade de ampliar nossos horizontes. \\
+\indent
+Nossos familiares e mestres que sempre buscaram nos estimular durante o projeto.
+\indent
+Ao meu pai, José Luiz Voltan (\textit{in memorian}), por todo seu amor, exemplo de caráter e dignidade que me permitiram chegar até aqui. Além das palavras de estímulo e orgulho ao longo do projeto.\\
+\indent
+Em especial ao nosso Professor Orientador Ten. Cel. Anderson Fernandes Pereira dos Santos, por sua disponibilidade e atenção.
+}%
+\makethanks
+
+% -----
+% PÁGINA DE EPÍGRAFE (OPCIONAL, ie. pode remover toda a página)
+% -----
+%%% EPÍGRAFE - PREENCHER...
+\epigrafe{%
+A história de todas as grandes civilizações galácticas tende a atravessar três fases distintas e identificáveis – as da sobrevivência, da interrogação e da sofisticação, também conhecidas como as fases do como, do porquê e do onde.
+}%
+\autorepigrafe{%    %% Se não tem autor, coloque "Anônimo"
+Douglas Adams
+}%
+\makeepigraph
+
+% -----
+% PÁGINA DE SUMÁRIO
+% -----
+\tableofcontents
+
+% -----
+% PÁGINAS DE LISTAS DE FIGURAS E DE TABELAS
+% se a Dissertação não possui figuras e/ou tabelas, REMOVA O COMANDO CORRESPONDENTE
+% -----
+\listoffigures
+% \listoftables
+
+% -----
+% PÁGINA DE LISTA DE SIGLAS
+% se a Dissertação não possui siglas, REMOVA TODA A PÁGINA
+% -----
+%%% SIGLAS - PREENCHER...
+\acronimo{AJAX}{Asynchronous JavaScript And XML}
+\acronimo{BD}{Banco de Dados}
+\acronimo{CA}{Corpo de Alunos}
+\acronimo{ER}{Entidade-Relacionamento}
+\acronimo{GNU}{Gnu's Not Unix}
+\acronimo{HTML}{Hypertext Markup Language}
+\acronimo{HTTP}{HyperText Transfer Protocol}
+\acronimo{IDC}{International Data Corporation}
+\acronimo{IME}{Instituto Militar de Engenharia}
+\acronimo{IP}{Internet Protocol}
+\acronimo{JPEG}{Joint Photographic Experts Group}
+\acronimo{JSP}{Java Server Page}
+\acronimo{LBPH}{Local Binary Patterns Histograms}
+\acronimo{LBP}{Local Binary Pattern}
+\acronimo{LDA}{Linear Discriminant Analysis}
+\acronimo{NDK}{Native Development Kit}
+\acronimo{NEFSE}{Normas de Execução de Funções e Serviços de Escala}
+\acronimo{NICA}{Normas Internas do Corpo de Alunos}
+\acronimo{PCA}{Principal Component Analysis}
+\acronimo{SDK}{Software Development Kit}
+\acronimo{TCP}{Transmission Control Protocol}
+\acronimo{UDP}{User Datagram Protocol}
+
+
+
+
+
+% \acronimo{UN}{United Nations}
+
+\listofnicks
+
+% -----
+% PÁGINA DE LISTA DE ABREVIATURAS
+% se a Dissertação não possui abreviaturas ou símbolos, REMOVA TODA A PÁGINA
+% -----
+%%% ABREVIATURAS - PREENCHER...
+\abreviatura{OpenCV}{Open Source Computer Vision}
+% \abreviatura{JS}{fluxo secundário (difusivo)}
+% abreviatura{M}{número de Mach}
+
+%%% SÍMBOLOS - PREENCHER...
+%\simbolo{$\Phi$}{termo de dissipação viscosa}
+%\simbolo{$\Gamma$}{coeficiente de difusão efetivo}
+%\simbolo{$\alpha$}{fator de sub-relaxação}
+%\simbolo{$\phi$}{variável dependente da equação diferencial geral}
+
+\listofsymbols
+
+% -----
+% PÁGINA DE RESUMO
+% -----
+%%% RESUMO - PREENCHER...
+\resumo{
+O objetivo deste projeto consiste em desenvolver um sistema informatizado, empregando reconhecimento facial e tecnologia de desenvolvimento móvel, visando propor uma alternativa para o  atual sistema de apuração de faltas dos alunos do IME. Essa alternativa consiste em utilizar dispositivos eletrônicos para registrar a frequência dos alunos, em vez de fazê-lo por meio do preenchimento de papeletas, com a finalidade de facilitar o processo de verificação de presença, evitando o retrabalho recorrente do modelo vigente. Nessa proposta, tirar-se-á uma fotografia da turma, enviando-a posteriormente para um servidor remoto responsável por realizar o reconhecimento facial. O servidor possui um banco de imagens da turma, que são utilizadas para o treinamento do algoritmo de reconhecimento facial. A inteligência gerada pelo treinamento associa os parâmetros de cada foto do banco de imagens a um identificador, nesse caso o nome do aluno. Dessa forma, o reconhecimento consiste em comparar os parâmetros de uma foto tirada com os parâmetros das imagens do banco de imagens. A presença do aluno é registrada quando ele é reconhecido na fotografia. Essa informação é, então, salva em um banco de dados, possibilitando o armazenamento persistente da informação, permitindo, portanto, a correção de eventuais erros. A atualização dos dados pode ser feita no momento em que a foto foi tirada ou em momentos posteriores, podendo-se utilizar a fotografia para eventuais verificações necessárias.\\
+}
+%facial qual se gera a inteligência necessária de modo a completar o processo de reconhecimento facial com sucesso
+\makeresumo
+
+% -----
+% PÁGINA DE ABSTRACT
+% -----
+%%% ABSTRACT - PREENCHER...
+\abstract{%
+The objective of this project is to develop a computerized system, employing facial recognition and mobile development technology, aiming at proposing an alternative to the current IME’s student attendance system. This alternative consists of using electronic devices to record the students' attendance, rather than filling a paper form, in order to facilitate the presence verification process, avoiding the recurring rework of the current model. In this proposal, a photograph of the class is taken, which is sent to a remote server responsible for performing facial recognition. The server has a group of images of the class, which is used to train the facial recognition algorithm. The intelligence obtained by this training process associates the parameters of each picture in the image bank to an identifier, in this case the student's name. In this way, recognition consists of comparing the parameters of a photo taken with the parameters of the image bank images. The student's presence is recorded when he is recognized in the photograph. This information is then saved in a database, allowing the persistent storage of the information, thus allowing the correction of any errors. This can be done at the time the photo was taken, as well as at later times, and the photograph can be used for any necessary checks.
+}%
+\makeabstract

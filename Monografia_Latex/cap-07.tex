@@ -1,0 +1,70 @@
+\chapter{Análise crítica do sistema}
+\noindent
+Realizar-se-á nesse capítulo uma análise crítica do sistema, verificando primeiramente se todos os requisitos propostos foram satisfatoriamente atendidos e, posteriormente, analisando oportunidades de melhoria para futuros projetos que tenham como base temas próximos ao do trabalho em tela. 
+\section{Verificação dos requisitos}
+Cabe, nesse momento, verificar se os requisitos levantados no início do projeto (Capítulo 3) foram satisfatoriamente atendidos.
+\subsection{Requisitos funcionais}
+Tratar-se-á primeiro sobre os requisitos funcionais:
+\begin{itemize}
+\item RF01 - Apurar falta; 
+\item RF02 - Verificar lista de presença; 
+\item RF03 - Editar lista de presença; e 
+\item RF04 - Armazenar fotografia.
+\end{itemize}
+
+Após o envio da fotografia da turma, e recebimento pelo servidor tem-se a apuração das faltas. Vale destacar que a fotografia é selecionada pelo professor a partir do acesso à sua galeria ou obtida através da câmera no momento de aula. A análise da foto permite identificar as faces do alunos, possibilitando atribuir presença para os alunos reconhecidos no processo. O sistema consegue reconhecer várias faces em uma mesma fotografia, e permite o envio de várias fotografias para um mesmo tempo (em operações de envio distintas). Assim sendo, apura-se satisfatoriamente as faltas e cumpre-se o RF01. 
+
+A verificação da lista de presença é possível devido ao módulo BD, que busca, no banco de dados, as informações referentes a presença e as exibe no ambiente Web, permitindo consulta. Além disso, o módulo BD também permite, através da interface web, que a presença em uma papeleta de faltas seja editada. Cumpre-se, dessa maneira, os requisitos RF02 e RF01. Cabe mais uma vez destacar a limitação mencionada ao final do capítulo 6. Por questões de limitações temporais do projeto, não foi projetado um sistema de login e senha. Com o sistema atual o professor pode fazer a edição/atualização da papeleta, com um sistema de login e senha, com um sistema de login e senha, somente o professor poderia fazer essa edição/atualização.
+
+Por fim, quando o módulo servidor terminar a análise da fotografia, a mesma será transferida para a pasta de armazenamento (denominada apuradas). Permite-se, assim, uma auditoria no futuro caso essa seja necessária. O armazenamento da fotografia, então, consolida o cumprimento do RF04.
+
+\subsection{Requisitos não funcionais}
+Tratar-se-á, agora, os requisitos não funcionais:
+\begin{itemize}
+\item RN01 - O Sistema deve apresentar interface com o usuário “Professor” compatível com o sistema \textit{Android}; 
+\item RN02 - O banco de dados, no qual se fará o armazenamento persistente, deve ser PostgreSQL; 
+\item RN03 - As tarefas de captura de foto, reconhecimento facial e armazenamento de registros devem ser feitas em módulos distintos; e
+\item RN04 - Um professor deve ser capaz de utilizar o sistema após um treinamento de 15 minutos.
+\end{itemize}
+
+Conforme descrito descrito ao longo da descrição da aplicação mobile (Capítulo 5), o aplicativo teve seu desenvolvimento focado no sistema operacional \textit{Android}, satisfatoriamente cumprindo o RN01. De maneira semelhante, desenvolveu-se o armazenamento persistente das informações em banco de dados utilizando PostgreSQL, o que foi descrito ao longo do (Capítulo 6). Como sugestão de melhoria, poderia-se acrescentar ao aplicativo uma tela que redirecionasse para a tela de consulta, dessa forma, após o envio da fotografia, o professor já iria observar quais alunos foram reconhecidos e quais não, e assim optar por enviar uma nova fotografia ou simplesmente atualizar a papeleta.
+
+Quanto a modularização, tem-se que a leitura do trabalho torna claro o fato de que a realização do projeto foi inteiramente feita de maneira modular. Isso permite que trabalhos futuros reaproveitem o projeto, substituindo apenas alguns módulos. Assim sendo, concluí-se que o RN03 também foi atendido.
+
+Por fim, a interface amigável das aplicações \textit{Android} e \textit{Web} tornam a utilização de todo o sistema extremamente intuitiva. Dessa forma, garante-se que a utilização do sistema não apresentará dificuldades para maior parte do grupo de utilizadores mesmo dentro do contexto da utilização acontecer sem nenhum treinamento prévio. Além disso, espera-se que, em uma eventual necessidade, dúvidas sobre a utilização do sistema por determinado professor possam ser sanadas em um tempo inferior a 15 minutos. Garante-se, assim, o cumprimento do RN04.
+
+\section{Oportunidades de melhoria}
+Entende-se que o módulo de reconhecimento facial, apresentado ao longo do capítulo 4, pode ser modificado de tal forma a melhorar os índices de reconhecimento, ou seja, pode-se buscar apurar as faltas com mais eficiência a partir da fotografia analisada. A utilização da biblioteca \textit{OpenCV}, biblioteca gratuita para uso no meio acadêmico e comercial, foi satisfatória para os objetivos do trabalho em tela, mas pode-se explorar formas de melhorar os algoritmos, sendo o \textit{HaarCascade} ou até mesmo o LBPH. Essa melhoria de algoritmos, que fugiria do escopo do trabalho em tela, pode resultar em melhores índices no número de faces reconhecidas e também em uma maior certeza associada a cada um dos reconhecimentos.
+
+Entende-se também que fotografar a turma pode ser uma tarefa demandadora de tempo. Tal ação poderia ser substituída por um sistema automático de retirada de fotos. Uma câmera, por exemplo, poderia ser colocada na sala de aula em posição estratégica e, ao longo da aula, fotografar-se-ia os alunos presentes, sempre atribuindo presença aqueles que foram reconhecidos. Nesse contexto, não seria mais responsabilidade do professor fotografar a turma e economizaria-se tempo de aula, já que não seria mais necessário utilizar parte do tempo de aula para enviar a fotografia para o servidor. Destaca-se ainda o fato de que a automatização do processo permitiria que várias fotografias fossem tiradas em diferentes momentos da aula, melhorando os índices de reconhecimento já que criar-se-ia diferentes oportunidades de reconhecimento.
+
+Por fim, destaca-se oportunidades de melhoria da aplicação \textit{Web}, cuja interface gráfica pode ser modificada e cuja segurança de acesso pode ser intensificada. As consequências seriam uma experiência de utilização mais agradável e um aumento de segurança, impedindo, por exemplo, que modificações dos status de presença dos alunos fossem realizados por alguém que não o professor que ministrou a respectiva aulas.
+
+%\\chapter{Utilização e testes do sistema}
+%\\noindent
+%\Nesse capítulo, realizam-se demonstrações do funcionamento do sistema, buscando mostrar de maneira clara como utilizar o sistema.
+%\\section{Conceito Geral do módulo}
+
+
+
+%\De fato o sistema atende a todos requisitos funcionais estabelecidos. A apuração das faltas é feita posteriormente ao recebimento da foto, registrada pelo professor ou selecionada à partir da sua galeria. A análise da foto permite identificar as faces do alunos, possibilitando atribuir presença para os alunos reconhecidos no processo. Quanto a verificação da lista de presença, tem-se a realização como possível devido ao módulo BD, que busca, no banco de dados, as informações referentes a presença. Além disso, o módulo BD também permite, através da interface web, que se edite a presença em uma papeleta de faltas. Por fim, quando o módulo servidor terminar a análise da fotografia, migrar-se-á a mesma para a pasta de armazenamento, , permitindo, assim, uma auditoria.
+%\begin{itemize}
+%\item RF01 - Apurar falta: O sistema deve apurar as faltas de um determinado tempo de aula em uma data, disciplina, para uma turma, usando o reconhecimento facial em uma fotografia da turma. As fotos devem ser tiradas por um dispositivo móvel com câmera ou selecionadas de sua galeria. Deve-se reconhecer várias faces em uma única fotografia, isso é, a fotografia é da turma e não individual. As informações referentes a data, isso é, dia, mês e ano devem ser extraídas do servidor; 
+
+%\item RF02 - Verificar lista de presença : Um aluno, coordenador ou professor deve ser capaz de  exibir a lista de presença referente a um determinado tempo de aula, de um determinado dia para uma turma específica; 
+%\item RF03 - Editar lista de presença : O professor deve ser capaz de alterar as faltas de um tempo de aula, isso permite que ele corrija eventuais erros na apuração de faltas que usou o reconhecimento facial; e 
+%\item RF04 - Armazenar fotografia : Deve-se armazenar a fotografia com sua apuração, permitindo uma auditoria.
+%\end{itemize}
+%
+%Quanto aos requisitos não-funcionais:
+%\begin{itemize}
+%\item RN01 - O Sistema deve apresentar interface com o usuário “Professor” compatível com o  sistema Android; 
+
+%\item RN02 - O banco de dados, no qual se fará o armazenamento persistente, deve ser PostgreSQL;
+
+%\item RN03 - As tarefas de captura de foto, reconhecimento facial e armazenamento de registros devem ser feitas em módulos distintos; e
+
+%\item RN04 - Um professor deve ser capaz de utilizar o sistema após um treinamento de 15 minutos.
+%\end{itemize}
+
+%O sistema também atende a todos os requisitos acima expostos. O módulo %\textit{mobile} foi construído na forma de um aplicativo Android. O banco de dados utilizado foi o PostgreSQL. Toda construção do sistema seguiu o princípio da modularidade, onde se tem os módulos \textit{servidor, mobile e BD}. Por fim, o aspecto simples e intuitivo do aplicativo Tchau Papeletas combinado com a página de exibição e edição das papeletas permitiram que os professores convidados conseguissem utilizar o sistema com um tempo inferior de treinamento. 
